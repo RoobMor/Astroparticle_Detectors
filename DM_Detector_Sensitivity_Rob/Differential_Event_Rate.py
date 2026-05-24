@@ -1,12 +1,10 @@
 # coding: utf-8
 # @author: R.M.
 
-from Reduced_Mass import mu
 from constants import m_n, N0, rho_chi, v_0, c1, c2, v_light
 from numpy import exp, sqrt, pi, array, logspace
-from Form_Factor import form_factor
+from functions import form_factor, mu
 import matplotlib.pyplot as plt
-
 
 # inizio considerando una sigma_n arbitraria
 sigma_n = 1 * 1e-46 # fm^-2
@@ -35,7 +33,7 @@ def diff_rate(m_chi, A, E_recoil):
 # =============================================================================
 #  Plot 1
 # =============================================================================
-
+plt.figure(1)
 plt.xscale("log")
 plt.yscale("log")
 
@@ -54,7 +52,7 @@ for m_chi, c in zip(Masse_chi, Colors):
              color = c,
              label = r"$m_{\chi}$ =" + f"{m_chi/1e6} GeV")
 
-plt.ylim(1e-60,2*diff_rate(Masse_chi[0], A, 1e-1))
+plt.ylim(1e-60, 2*diff_rate(Masse_chi[0], A, 1e-1))
     
 
 plt.legend()

@@ -1,27 +1,18 @@
 # coding: utf-8
 # @author: R.M.
-from constants import s, m_n, fm_to_1_over_keV
+
+from functions import form_factor
 import numpy as np
-from numpy import sin, cos, exp, power, sqrt
 import matplotlib.pyplot as plt
 
-def J1(z):
-    return (sin(z) - z * cos(z)) / z**2
 
-def form_factor(A, E_r):
-    r_n = 1.2 * power(A, 1/3)
-    r_0 = sqrt(5*(r_n**2 / 3 - s**2))
-    m_N = m_n * A
-    q = sqrt(2 * E_r * m_N) * fm_to_1_over_keV
-    
-    return 3 * J1(q*r_0) / (q*r_0) * exp(-(q*s)**2 / 2)
- 
-    
 # =============================================================================
 #  Plot 1
 # =============================================================================
+plt.figure(1)
 plt.xscale("log")
 
+plt.title("Form Factors in LogSpace")
 plt.xlabel(r"$E_R$ [keV]")
 plt.ylabel(r"$F^2(E_R)$")
 
@@ -46,9 +37,11 @@ plt.show()
 # =============================================================================
 # Plot 2
 # =============================================================================
+plt.figure(2)
 plt.xscale("log")
 plt.yscale("log")
 
+plt.title("Form Factors in LogLogSpace")
 plt.xlabel(r"$E_R$ [keV]")
 plt.ylabel(r"$F^2(E_R)$")
 
