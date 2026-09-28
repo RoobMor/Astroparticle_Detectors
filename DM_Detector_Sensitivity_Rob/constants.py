@@ -16,7 +16,7 @@ omega = 2 * pi / 365 # periodo orbitale terrestre, 1/day
 theta = pi/3         # inclinazione orbita terrestre - piano galattico
 
 # fattori adimensionali
-N0 = 6.022e29       # N. Avogadro
+N0 = 6.022e29        # N. Avogadro
 c1 = 0.751
 c2 = 0.561
 
