@@ -4,11 +4,11 @@
 from numpy import pi
 
 # velocità in km/s
-v_c    = 238.
-v_odot = v_c + 12.
-v_plus = 29.8
-v_esc  = 544.
-v_0 = 220.
+v_c     = 238.
+v_odot  = v_c + 12.
+v_plus  = 29.8
+v_esc   = 544.
+v_0     = 220.
 v_light = 2.998e5
 
 # parametri orbitali
@@ -21,9 +21,9 @@ c1 = 0.751
 c2 = 0.561
 
 # fattori di conversione
-s_to_yr  = 1/(365*24*60*60)
-km_to_cm = 1e5
-days_to_years = 1/365
+s_to_yr          = 1/(365*24*60*60)
+km_to_cm         = 1e5
+days_to_years    = 1/365
 fm_to_1_over_keV = 1/197.3269631 * 1e-3
 
 # massa nucleoni, keV
