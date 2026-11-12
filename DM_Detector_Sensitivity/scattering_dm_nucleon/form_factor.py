@@ -13,14 +13,14 @@ def form_factor(q, r_0, s):
     return expon * num / den
 
 def f_squared_calculation(Er, A):
-    s      = 0.9                                # fm
+    s   = 0.9                                   # fm
     r_n = 1.2 * A**(1/3)                        # raggio nucleare, fm
     r_0 = math.sqrt(5*(r_n**2 / 3 - s**2))      # fm
     r_0 = r_0 * fm_to_1_over_keV                # keV^-1
     m_N = A * m_protone                         # keV
     q   = np.sqrt(2 * Er * m_N)                 # keV
 
-    F = form_factor(q, r_0, s* fm_to_1_over_keV)
+    F = form_factor(q, r_0, s * fm_to_1_over_keV)
     F_squared = F**2
 
     return F_squared

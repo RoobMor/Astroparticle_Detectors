@@ -1,6 +1,9 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+import sys
+
+sys.path.append("../Astroparticle_Detectors")
 from constants import *
 from form_factor import f_squared_calculation, f_plotting
 from scipy.integrate import trapezoid

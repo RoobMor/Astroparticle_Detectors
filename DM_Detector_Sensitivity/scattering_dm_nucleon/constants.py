@@ -4,6 +4,8 @@ fm_to_1_over_keV = 1/197.3269631 * 1e-3
 s_to_yr          = 1/(365*24*60*60)
 
 m_protone = 938.272 * 1e3 # keV
+m_elettrone = 510.9989 # keV
+e = 1.602 * 1e-19 # C
 
 # Numero di Avogadro
 # NA = 6.022e26       # kg^-1
@@ -20,3 +22,5 @@ rho_chi = 0.3 * 1e6 * 1e-39 # keV / fm^3
 c = 299792.458 # km/s
 v0 = 220/c # km/s
 v_max = (544 + 220 + 12 + 30)/c # km/s
+v_esc = 544 # km/s
+v_E   = [11.1, 244.24, 7.25] # km/s
